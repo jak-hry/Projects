@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a43c7628-5cc9-4099-86d9-e5c790361443" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/AIcomputer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/MainClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669908649381</updated>
-      <workItem from="1669908650955" duration="525000" />
+      <workItem from="1669908650955" duration="1396000" />
     </task>
     <servers />
   </component>
