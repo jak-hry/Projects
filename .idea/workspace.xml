@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a43c7628-5cc9-4099-86d9-e5c790361443" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/AIcomputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +91,8 @@
       <workItem from="1670020718420" duration="96000" />
       <workItem from="1670021765471" duration="242000" />
       <workItem from="1670063774326" duration="13000" />
-      <workItem from="1670072445851" duration="1221000" />
+      <workItem from="1670072445851" duration="3167000" />
+      <workItem from="1670077530074" duration="1570000" />
     </task>
     <servers />
   </component>

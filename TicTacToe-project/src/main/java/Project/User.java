@@ -1,14 +1,25 @@
 package Project;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class User {
 
     public static boolean addUser(char[][] board, char symbol) {
 
         while (true) {
 
+            Scanner scan = new Scanner(System.in);
+
             System.out.println("\nenter the row coordinates ");
-            int tempValue1 = 0;
-            int row = GameBoard.exceptionSearch(tempValue1);
+            int row;
+            try {
+                row = scan.nextInt();
+                scan.nextLine();
+            } catch (InputMismatchException e) {
+                System.out.println("Exception - " + e);
+                continue;
+            }
 
             if (row >= 3) {
                 System.out.println("too high coordinates, try again - " + symbol);
@@ -16,8 +27,15 @@ public class User {
             }
 
             System.out.println("enter the column coordinates ");
-            int tempValue2 = 0;
-            int column = GameBoard.exceptionSearch(tempValue2);
+            int column;
+            try {
+                column = scan.nextInt();
+                scan.nextLine();
+            }catch (InputMismatchException e){
+                System.out.println("Exception - " +e);
+                continue;
+            }
+
 
             if (column >= 3) {
                 System.out.println("too high coordinates, try again - " + symbol);
