@@ -10,6 +10,7 @@ public class GameBoard {
         Scanner scan = new Scanner(System.in);
         char user1 = 'X';
         char user2 = 'O';
+        boolean endGame = true;
 
         while (true) {
 
@@ -25,19 +26,18 @@ public class GameBoard {
 
                 char[][] board = new char[3][3];
 
-                while (true) {
+                while (endGame) {
 
-                    boolean user1Move = User.performUserMove(board, nickName1, user1);
-                    if (!user1Move) {
-                        System.out.println(nickName1 + " won");
+                    boolean endOfGame1 = User.performUserMove(board, nickName1, user1);
+                    if (endOfGame1) {
                         break;
                     }
 
-                    boolean user2Move = User.performUserMove(board, nickName2, user2);
-                    if (!user2Move) {
-                        System.out.println(nickName2 + " won");
+                    boolean endOfGame2 = User.performUserMove(board, nickName2, user2);
+                    if (endOfGame2) {
                         break;
                     }
+
                 }
 
             } else if (chooseMode == 2) {
@@ -50,15 +50,12 @@ public class GameBoard {
 
                 while (true) {
 
-                    boolean userMove = User.performUserMove(board, nickName, user1);
-                    if (!userMove) {
-                        System.out.println(nickName + " won");
+                    boolean endOfGame1 = User.performUserMove(board, nickName, user1);
+                    if (endOfGame1) {
                         break;
                     }
-
-                    boolean computerMove = Computer.performComputerMove(board, botName, user2);
-                    if (!computerMove) {
-                        System.out.println(botName + " won");
+                    boolean endOfGame2 = Computer.performComputerMove(board, botName, user2);
+                    if (endOfGame2) {
                         break;
                     }
                 }

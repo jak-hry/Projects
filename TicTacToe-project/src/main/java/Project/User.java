@@ -67,6 +67,6 @@ public class User {
         if (userMove) {
             won = WinChecking.checking(board, symbol);
         }
-        return !won;
+        return won;
     }
 }
