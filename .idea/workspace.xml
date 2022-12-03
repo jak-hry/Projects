@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a43c7628-5cc9-4099-86d9-e5c790361443" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/AIcomputer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
-    <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.MainClass" />
+    <configuration name="GameBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.GameBoard" />
       <module name="projects.TicTacToe-project.main" />
       <extension name="coverage">
         <pattern>
@@ -68,7 +72,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainClass" />
+        <item itemvalue="Application.GameBoard" />
       </list>
     </recent_temporary>
   </component>
@@ -80,7 +84,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669908649381</updated>
-      <workItem from="1669908650955" duration="1396000" />
+      <workItem from="1669908650955" duration="1904000" />
+      <workItem from="1669911333980" duration="72000" />
+      <workItem from="1669917520054" duration="1526000" />
+      <workItem from="1669924436910" duration="18000" />
+      <workItem from="1669925180426" duration="44000" />
+      <workItem from="1669984491869" duration="734000" />
+      <workItem from="1669987126952" duration="1803000" />
+      <workItem from="1670019781466" duration="424000" />
+      <workItem from="1670020718420" duration="96000" />
+      <workItem from="1670021765471" duration="242000" />
+      <workItem from="1670063774326" duration="13000" />
+      <workItem from="1670072445851" duration="1221000" />
     </task>
     <servers />
   </component>
