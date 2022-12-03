@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class User {
 
-    public static boolean addUser(char[][] board, char symbol) {
+    public static boolean userMove(char[][] board, char symbol) {
 
         while (true) {
 
@@ -49,7 +49,7 @@ public class User {
             } else {
                 System.out.println("\nfield occupied, try again - " + symbol);
                 Board.printBoard(board);
-                addUser(board, symbol);
+                userMove(board, symbol);
             }
         }
 
@@ -63,7 +63,7 @@ public class User {
         Board.printBoard(board);
 
         System.out.println("\n" + userName + " your turn - " + symbol);
-        boolean userMove = User.addUser(board, symbol);
+        boolean userMove = User.userMove(board, symbol);
         if (userMove) {
             won = WinChecking.checking(board, symbol);
         }
