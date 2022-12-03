@@ -75,19 +75,6 @@ public class GameBoard {
         }
     }
 
-    public static int exceptionSearch(int value) {
-
-        Scanner scan = new Scanner(System.in);
-        try {
-            value = scan.nextInt();
-            scan.nextLine();
-        } catch (InputMismatchException e) {
-            System.out.println("Exception - " + e + "\n");
-            System.out.println("try again");
-        }
-        return value;
-    }
-
     private static int selectingAGameMode(int choose) {
         Scanner scan = new Scanner(System.in);
 
