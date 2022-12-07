@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Computer {
 
-    public static boolean addComputerEasyMode(char[][] board, char symbol) {
+    private static boolean computerEasyModeMove(char[][] board, char symbol) {
 
         Random random = new Random();
 
@@ -16,7 +16,57 @@ public class Computer {
             return true;
 
         } else {
-            addComputerEasyMode(board, symbol);
+            computerEasyModeMove(board, symbol);
+        }
+
+        return false;
+    }
+
+    private static boolean computerMediumModeMove(char[][] board, char symbol) {
+
+        int size = 3;
+        int counter = 0;
+        int counter1 = 0;
+        int counter2 = 0;
+        int counter3 = 0;
+        int counter4 = 0;
+        char user1 = 'X';
+        boolean won = true;
+
+        while (won) {
+            for (int row = 0; row < size; row++) {
+                for (int column = 0; column < size; column++) {
+                    if (board[row][column] == user1) {
+                        counter1++;
+                        System.out.println(counter1);
+                    } else if (board[row][column] == symbol) {
+                        counter++;
+                        won = false;
+                    } else if (counter1 == 2) {
+                        board[row][column] = symbol;
+                        won = true;
+                    }
+                }
+            }
+
+            for (int column = 0; column < size; column++) {
+                for (int row = 0; row < size; row++) {
+                    if (board[row][column] == user1) {
+                        counter2++;
+                    } else if (board[row][column] == symbol) {
+                        counter++;
+                        won = false;
+                    } else if (counter2 == 2) {
+                        board[row][column] = symbol;
+                        won = true;
+                    }
+                }
+            }
+
+            if (won) {
+                computerEasyModeMove(board, symbol);
+                return true;
+            }
         }
 
         return false;
@@ -28,11 +78,27 @@ public class Computer {
 
         Board.printBoard(board);
 
-        System.out.println("\n" + computerMode + " your turn - " + symbol);
-        boolean computerMove = Computer.addComputerEasyMode(board, symbol);
-        if (computerMove){
+        System.out.println("\n" + computerMode + " turn - " + symbol);
+        boolean computerMove = computerEasyModeMove(board, symbol);
+        if (computerMove) {
             won = WinChecking.checking(board, symbol);
         }
-        return !won;
+
+        return won;
+    }
+
+    public static boolean performComputerMediumModeMove(char[][] board, String computerMode, char symbol) {
+
+        boolean won = false;
+
+        Board.printBoard(board);
+
+        System.out.println("\n" + computerMode + " your turn - " + symbol);
+        boolean computerMove = Computer.computerMediumModeMove(board, symbol);
+        if (computerMove) {
+            won = WinChecking.checking(board, symbol);
+        }
+
+        return won;
     }
 }

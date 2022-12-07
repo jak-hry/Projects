@@ -7,10 +7,11 @@ public class WinChecking {
         return rowsWinCheck(board, symbol) ||
                 columnsWinCheck(board, symbol) ||
                 checkFirstBevel(board, symbol) ||
-                checkSecondBevel(board, symbol);
+                checkSecondBevel(board, symbol) ||
+                drawCheck(board, symbol);
     }
 
-    public static boolean rowsWinCheck(char[][] board, char symbol) {
+    private static boolean rowsWinCheck(char[][] board, char symbol) {
 
         int size = 3;
 
@@ -31,7 +32,7 @@ public class WinChecking {
         return false;
     }
 
-    public static boolean columnsWinCheck(char[][] board, char symbol) {
+    private static boolean columnsWinCheck(char[][] board, char symbol) {
 
         int size = 3;
 
@@ -52,7 +53,7 @@ public class WinChecking {
         return false;
     }
 
-    public static boolean checkFirstBevel(char[][] board, char symbol) {
+    private static boolean checkFirstBevel(char[][] board, char symbol) {
 
         int size = 3;
 
@@ -63,16 +64,30 @@ public class WinChecking {
         }
 
         return true;
-
     }
 
-    public static boolean checkSecondBevel(char[][] board, char symbol) {
+    private static boolean checkSecondBevel(char[][] board, char symbol) {
 
         int size = 3;
 
         for (int i = 0; i < size; i++) {
             if (board[size - i - 1][i] != symbol) {
                 return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean drawCheck(char[][] board, char symbol) {
+
+        int size = 3;
+
+        for (int column = 0; column < size; column++) {
+            for (int row = 0; row < size; row++) {
+                if (board[row][column] != symbol) {
+                    return false;
+                }
             }
         }
 
