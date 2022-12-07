@@ -31,9 +31,9 @@ public class Computer {
         int counter3 = 0;
         int counter4 = 0;
         char user1 = 'X';
-        boolean won = true;
+        boolean move = true;
 
-        while (won) {
+        while (move) {
             for (int row = 0; row < size; row++) {
                 for (int column = 0; column < size; column++) {
                     if (board[row][column] == user1) {
@@ -41,10 +41,10 @@ public class Computer {
                         System.out.println(counter1);
                     } else if (board[row][column] == symbol) {
                         counter++;
-                        won = false;
+                        move = false;
                     } else if (counter1 == 2) {
                         board[row][column] = symbol;
-                        won = true;
+                        move = true;
                     }
                 }
             }
@@ -55,15 +55,15 @@ public class Computer {
                         counter2++;
                     } else if (board[row][column] == symbol) {
                         counter++;
-                        won = false;
+                        move = false;
                     } else if (counter2 == 2) {
                         board[row][column] = symbol;
-                        won = true;
+                        move = true;
                     }
                 }
             }
 
-            if (won) {
+            if (move) {
                 computerEasyModeMove(board, symbol);
                 return true;
             }
