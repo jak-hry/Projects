@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a43c7628-5cc9-4099-86d9-e5c790361443" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Statistics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsComputerEasyModeWinCounter1" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsComputerEasyModeWinCounter1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsComputerMediumModeWinCounter1" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsComputerMediumModeWinCounter1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsUserWinCounter1" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsUserWinCounter1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,13 +54,26 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.GameBoard">
+  <component name="RunManager" selected="Application.GameCounterTest">
     <configuration name="GameBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project.GameBoard" />
       <module name="projects.TicTacToe-project.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameCounterTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TicTacToeCounter.GameCounterTest" />
+      <module name="projects.TicTacToe-project.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TicTacToeCounter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,6 +109,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GameCounterTest" />
         <item itemvalue="Application.Statistics" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.GameBoard" />
@@ -144,6 +156,11 @@
       <workItem from="1670418193537" duration="24000" />
       <workItem from="1670419022601" duration="960000" />
       <workItem from="1670421262481" duration="25000" />
+      <workItem from="1670428296793" duration="650000" />
+      <workItem from="1670429035070" duration="706000" />
+      <workItem from="1670441163008" duration="767000" />
+      <workItem from="1670500719821" duration="90000" />
+      <workItem from="1670502396259" duration="300000" />
     </task>
     <servers />
   </component>
