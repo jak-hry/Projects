@@ -25,40 +25,49 @@ public class Computer {
     private static boolean computerMediumModeMove(char[][] board, char symbol) {
 
         int size = 3;
-        int counter = 0;
-        int counter1 = 0;
-        int counter2 = 0;
-        int counter3 = 0;
-        int counter4 = 0;
+        int counterX, counterO;
         char user1 = 'X';
         boolean move = true;
 
         while (move) {
             for (int row = 0; row < size; row++) {
+                counterX = 0;
+                counterO = 0;
                 for (int column = 0; column < size; column++) {
                     if (board[row][column] == user1) {
-                        counter1++;
-                        System.out.println(counter1);
+                        counterX++;
                     } else if (board[row][column] == symbol) {
-                        counter++;
-                        move = false;
-                    } else if (counter1 == 2) {
-                        board[row][column] = symbol;
-                        move = true;
+                        counterO++;
+                    }
+                }
+
+                if (counterX == 2 && counterO == 0) {
+                    for (int column = 0; column < size; column++) {
+                        if (board[row][column] == '0') {
+                            board[row][column] = symbol;
+                            move = false;
+                        }
                     }
                 }
             }
 
             for (int column = 0; column < size; column++) {
+                counterX = 0;
+                counterO = 0;
                 for (int row = 0; row < size; row++) {
                     if (board[row][column] == user1) {
-                        counter2++;
+                        counterX++;
                     } else if (board[row][column] == symbol) {
-                        counter++;
-                        move = false;
-                    } else if (counter2 == 2) {
-                        board[row][column] = symbol;
-                        move = true;
+                        counterO++;
+                    }
+                }
+
+                if (counterX == 2 && counterO == 0) {
+                    for (int row = 0; row < size; row++) {
+                        if (board[row][column] == '0') {
+                            board[row][column] = symbol;
+                            move = false;
+                        }
                     }
                 }
             }

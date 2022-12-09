@@ -83,15 +83,16 @@ public class WinChecking {
 
         int size = 3;
 
-        for (int column = 0; column < size; column++) {
-            for (int row = 0; row < size; row++) {
-                if (board[row][column] != symbol) {
-                    return false;
+        for (int row = 0; row < size; row++) {
+            for (int column = 0; column < size; column++) {
+                if (board[row][column] == '0') {
+                    return true;
                 }
             }
+
         }
 
-        return true;
+        return false;
     }
 
 }

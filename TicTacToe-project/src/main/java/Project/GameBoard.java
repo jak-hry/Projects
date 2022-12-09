@@ -33,14 +33,15 @@ public class GameBoard {
                     boolean endOfGame1 = User.performUserMove(board, nickName1, user1);
                     if (endOfGame1) {
                         Statistics.userVsUserWinCounter1();
+                        Board.printBoard(board);
                         break;
                     }
                     boolean endOfGame2 = User.performUserMove(board, nickName2, user2);
                     if (endOfGame2) {
                         Statistics.userVsUserWinCounter2();
+                        Board.printBoard(board);
                         break;
                     }
-
                 }
 
             } else if (chooseMode == 2) {
@@ -61,11 +62,13 @@ public class GameBoard {
                         boolean endOfGame1 = User.performUserMove(board, nickName, user1);
                         if (endOfGame1) {
                             Statistics.userVsComputerEasyModeWinCounter1();
+                            Board.printBoard(board);
                             break;
                         }
                         boolean endOfGame2 = Computer.performComputerMove(board, botName, user2);
                         if (endOfGame2) {
                             Statistics.userVsComputerEasyModeWinCounter2();
+                            Board.printBoard(board);
                             break;
                         }
                     }
@@ -82,11 +85,13 @@ public class GameBoard {
                         boolean endOfGame1 = User.performUserMove(board, nickName, user1);
                         if (endOfGame1) {
                             Statistics.userVsComputerMediumModeWinCounter1();
+                            Board.printBoard(board);
                             break;
                         }
                         boolean endOfGame2 = Computer.performComputerMediumModeMove(board, botName, user2);
                         if (endOfGame2) {
                             Statistics.userVsComputerMediumModeWinCounter2();
+                            Board.printBoard(board);
                             break;
                         }
                     }
@@ -147,7 +152,7 @@ public class GameBoard {
 
         while (playAgain) {
 
-            System.out.println("You want to play again?");
+            System.out.println("\nYou want to play again?");
             System.out.println("1 - Yes");
             System.out.println("2 - No");
 
