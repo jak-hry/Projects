@@ -5,20 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a43c7628-5cc9-4099-86d9-e5c790361443" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/GameStatsMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/TicTacToeStatistics/GameStats.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/TicTacToeStatistics/HashMapTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/TicTacToeStatistics/MyHashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/TicTacToeStatistics/TestingArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Example.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsComputerEasyModeWinCounter1" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsComputerEasyModeWinCounter1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsUserWinCounter1" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsUserWinCounter1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsUserWinCounter2" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Statistics/Files/userVsUserWinCounter2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/TicTacToeCounter/GameCounterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/TicTacToeCounter/TicTacToeGameCounter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/GameStatsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/GameStatsMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,12 +54,12 @@
   }
 }</component>
   <component name="RunManager" selected="Application.GameStatsMain">
-    <configuration name="GameCounterTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TicTacToeCounter.GameCounterTest" />
+    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameStats.Example" />
       <module name="projects.TicTacToe-project.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="TicTacToeCounter.*" />
+          <option name="PATTERN" value="GameStats.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Example" />
         <item itemvalue="Application.GameStatsMain" />
         <item itemvalue="Application.MyHashMap" />
         <item itemvalue="Application.TestingArrayList" />
         <item itemvalue="Application.HashMapTests" />
-        <item itemvalue="Application.GameCounterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +178,7 @@
       <workItem from="1670504773058" duration="293000" />
       <workItem from="1670527227038" duration="887000" />
       <workItem from="1670529196719" duration="3100000" />
-      <workItem from="1670583833639" duration="6695000" />
+      <workItem from="1670583833639" duration="9485000" />
     </task>
     <servers />
   </component>
