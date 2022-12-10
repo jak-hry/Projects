@@ -40,5 +40,4 @@ public class GameStatsMain implements Serializable {
 
         map.get("PVC1").incrementPlayer2();
     }
-
 }
