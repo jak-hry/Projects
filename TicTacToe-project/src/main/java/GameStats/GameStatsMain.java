@@ -1,78 +1,51 @@
 package GameStats;
 
-import java.util.ArrayList;
+import java.io.*;
 import java.util.HashMap;
+import java.util.Map;
 
-public class GameStatsMain {
+public class GameStatsMain implements Serializable {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        //licznik wygranych pierwszego gracza
-        arrayList.add(1);
-        //licznik wygranych drugiego gracza
-        arrayList.add(2);
+        Result result = new Result(0, 0);
 
-        HashMap<String, ArrayList<Integer>> map = new HashMap<>();
+        HashMap<String, Result> map = new HashMap<>();
+        map.put("PVP", result);
+        map.put("PVC1", result);
+        map.put("PVC2", result);
 
-        map.put("PVP", arrayList);
-        map.put("PVC1", new ArrayList<>());
-        map.put("PVC2", new ArrayList<>());
-
-        addNumberSecondKey(map);
-        addNumberThirdKey(map);
         incrementFirstCounter(map);
         incrementSecondCounter(map);
 
-        ArrayList<Integer> firstValue = map.get("PVP");
-        for (Integer element : firstValue) {
-            System.out.println(element);
+        try {
+
+            FileOutputStream fos = new FileOutputStream("map.bin");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(map);
+            oos.close();
+
+            FileInputStream fis = new FileInputStream("map.bin");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            HashMap<String, Result> map2 = (HashMap<String, Result>)ois.readObject();
+            ois.close();
+
+            System.out.println(map2);
+
+        } catch (Exception e) {
+            System.out.println("Exception - " + e);
         }
 
-        ArrayList<Integer> secondKey = map.get("PVC1");
-        for (Integer element : secondKey) {
-        //    System.out.println(element);
-        }
-
-        ArrayList<Integer> thirdKey = map.get("PVC2");
-        for (Integer element : thirdKey) {
-        //    System.out.println(element);
-        }
-
-        Object objectMap = map;
     }
 
-    public static void addNumberSecondKey(HashMap<String, ArrayList<Integer>> map) {
+    public static void incrementFirstCounter(HashMap<String, Result> map) {
 
-        ArrayList<Integer> list = map.get("PVC1");
-        list.add(3);
-        int number = list.get(0);
-        number++;
-        list.set(0, number);
-        map.put("PVC1", list);
+        map.get("PVP").incrementPlayer1();
     }
 
-    public static void addNumberThirdKey(HashMap<String, ArrayList<Integer>> map) {
+    public static void incrementSecondCounter(HashMap<String, Result> map) {
 
-        ArrayList<Integer> list = map.get("PVC2");
-        list.add(5);
+        map.get("PVC1").incrementPlayer2();
     }
 
-    public static void incrementFirstCounter(HashMap<String, ArrayList<Integer>> map) {
-
-        ArrayList<Integer> list = map.get("PVP");
-        int number = list.get(0);
-        list.set(0, number + 1);
-        map.put("PVP", list);
-
-    }
-
-    public static void incrementSecondCounter(HashMap<String, ArrayList<Integer>> map) {
-
-        ArrayList<Integer> list = map.get("PVP");
-        int number = list.get(1);
-        list.set(1, number + 1);
-        map.put("PVP", list);
-
-    }
 }

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a43c7628-5cc9-4099-86d9-e5c790361443" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Example.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Result.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/GameStatsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/GameStatsMain.java" afterDir="false" />
     </list>
@@ -178,7 +178,10 @@
       <workItem from="1670504773058" duration="293000" />
       <workItem from="1670527227038" duration="887000" />
       <workItem from="1670529196719" duration="3100000" />
-      <workItem from="1670583833639" duration="9485000" />
+      <workItem from="1670583833639" duration="10456000" />
+      <workItem from="1670608798744" duration="1199000" />
+      <workItem from="1670670983984" duration="1865000" />
+      <workItem from="1670672931661" duration="987000" />
     </task>
     <servers />
   </component>
