@@ -12,11 +12,11 @@ public class Result implements Serializable {
         this.player2 = 0;
     }
 
-    public void incrementPlayer1(){
+    public void incrementPlayer1() {
         player1++;
     }
 
-    public void incrementPlayer2(){
+    public void incrementPlayer2() {
         player2++;
     }
 }

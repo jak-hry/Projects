@@ -2,7 +2,6 @@ package GameStats;
 
 import java.io.*;
 import java.util.HashMap;
-import java.util.Map;
 
 public class GameStatsMain implements Serializable {
 
@@ -23,14 +22,8 @@ public class GameStatsMain implements Serializable {
             FileOutputStream fos = new FileOutputStream("map.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(map);
+            fos.close();
             oos.close();
-
-            FileInputStream fis = new FileInputStream("map.bin");
-            ObjectInputStream ois = new ObjectInputStream(fis);
-            HashMap<String, Result> map2 = (HashMap<String, Result>)ois.readObject();
-            ois.close();
-
-            System.out.println(map2);
 
         } catch (Exception e) {
             System.out.println("Exception - " + e);
