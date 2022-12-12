@@ -8,7 +8,8 @@ public class Statistics {
 
         int result1, result2, result3, result4, result5, result6;
         int sumOfWins1, sumOfWins2, sumOfWins3, totalWins;
-        float winPercentage1, winPercentage2, winPercentage3, winPercentage4, winPercentage5, winPercentage6;
+        float percentWin1, percentWin2, percentWin3, percentWin4, percentWin5, percentWin6;
+
 
         HashMap<String, Result> testingMap = Counter.readHashMapWithObject();
 
@@ -23,12 +24,19 @@ public class Statistics {
         sumOfWins2 = result3 + result4;
         sumOfWins3 = result5 + result6;
         totalWins = sumOfWins1 + sumOfWins2 + sumOfWins3;
-        winPercentage1 = calculatePercentage(result1, sumOfWins1);
-        winPercentage2 = calculatePercentage(result2, sumOfWins1);
-        winPercentage3 = calculatePercentage(result3, sumOfWins2);
-        winPercentage4 = calculatePercentage(result4, sumOfWins2);
-        winPercentage5 = calculatePercentage(result5, sumOfWins3);
-        winPercentage6 = calculatePercentage(result6, sumOfWins3);
+        percentWin1 = calculatePercentage(result1, sumOfWins1);
+        percentWin2 = calculatePercentage(result2, sumOfWins1);
+        percentWin3 = calculatePercentage(result3, sumOfWins2);
+        percentWin4 = calculatePercentage(result4, sumOfWins2);
+        percentWin5 = calculatePercentage(result5, sumOfWins3);
+        percentWin6 = calculatePercentage(result6, sumOfWins3);
+
+        String winPercentage1 = String.format("%.02f", percentWin1);
+        String winPercentage2 = String.format("%.02f", percentWin2);
+        String winPercentage3 = String.format("%.02f", percentWin3);
+        String winPercentage4 = String.format("%.02f", percentWin4);
+        String winPercentage5 = String.format("%.02f", percentWin5);
+        String winPercentage6 = String.format("%.02f", percentWin6);
 
         System.out.println();
         System.out.println("----------------------------------------------------");
@@ -72,6 +80,7 @@ public class Statistics {
 
     private static float calculatePercentage(float obtained, float total) {
         return obtained * 100 / total;
+
     }
 
 }

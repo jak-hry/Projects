@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a43c7628-5cc9-4099-86d9-e5c790361443" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/GameStatsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/GameStatsMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Stats.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.bin" beforeDir="false" afterPath="$PROJECT_DIR$/map.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/map.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,13 +54,13 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Stats">
-    <configuration name="GameBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project.GameBoard" />
+  <component name="RunManager" selected="Application.Statistics">
+    <configuration name="Counter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameStats.Counter" />
       <module name="projects.TicTacToe-project.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project.*" />
+          <option name="PATTERN" value="GameStats.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -71,12 +68,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameStatsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameStats.GameStatsMain" />
+    <configuration name="GameBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.GameBoard" />
       <module name="projects.TicTacToe-project.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GameStats.*" />
+          <option name="PATTERN" value="Project.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,8 +94,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Stats" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameStats.Stats" />
+    <configuration name="Statistics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameStats.Statistics" />
       <module name="projects.TicTacToe-project.main" />
       <extension name="coverage">
         <pattern>
@@ -120,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GameStatsMain" />
+        <item itemvalue="Application.Counter" />
         <item itemvalue="JUnit.All in projects (1)" />
         <item itemvalue="Application.GameBoard" />
         <item itemvalue="Application.GameStatsTests" />
-        <item itemvalue="Application.Stats" />
+        <item itemvalue="Application.Statistics" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +183,8 @@
       <workItem from="1670691635258" duration="13838000" />
       <workItem from="1670752251926" duration="2138000" />
       <workItem from="1670837662394" duration="5875000" />
-      <workItem from="1670858241242" duration="4171000" />
+      <workItem from="1670858241242" duration="4760000" />
+      <workItem from="1670863033451" duration="749000" />
     </task>
     <servers />
   </component>
