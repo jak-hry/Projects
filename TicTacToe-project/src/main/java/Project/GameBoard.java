@@ -1,14 +1,18 @@
 package Project;
 
-import Statistics.Statistics;
+import GameStats.Counter;
+import GameStats.Result;
 
-import java.io.IOException;
+import java.io.Serializable;
+import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class GameBoard {
+public class GameBoard implements Serializable {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+
+        HashMap<String, Result> map = Counter.readHashMapWithObject();
 
         Scanner scan = new Scanner(System.in);
         char user1 = 'X';
@@ -32,13 +36,15 @@ public class GameBoard {
 
                     boolean endOfGame1 = User.performUserMove(board, nickName1, user1);
                     if (endOfGame1) {
-                        Statistics.userVsUserWinCounter1();
+                        Counter.incrementFirstCounter(map);
+                        Counter.writeHashMapToObject(map);
                         Board.printBoard(board);
                         break;
                     }
                     boolean endOfGame2 = User.performUserMove(board, nickName2, user2);
                     if (endOfGame2) {
-                        Statistics.userVsUserWinCounter2();
+                        Counter.incrementSecondCounter(map);
+                        Counter.writeHashMapToObject(map);
                         Board.printBoard(board);
                         break;
                     }
@@ -61,13 +67,15 @@ public class GameBoard {
 
                         boolean endOfGame1 = User.performUserMove(board, nickName, user1);
                         if (endOfGame1) {
-                            Statistics.userVsComputerEasyModeWinCounter1();
+                            Counter.incrementThirdCounter(map);
+                            Counter.writeHashMapToObject(map);
                             Board.printBoard(board);
                             break;
                         }
                         boolean endOfGame2 = Computer.performComputerMove(board, botName, user2);
                         if (endOfGame2) {
-                            Statistics.userVsComputerEasyModeWinCounter2();
+                            Counter.incrementFourthCounter(map);
+                            Counter.writeHashMapToObject(map);
                             Board.printBoard(board);
                             break;
                         }
@@ -84,13 +92,15 @@ public class GameBoard {
 
                         boolean endOfGame1 = User.performUserMove(board, nickName, user1);
                         if (endOfGame1) {
-                            Statistics.userVsComputerMediumModeWinCounter1();
+                            Counter.incrementFifthCounter(map);
+                            Counter.writeHashMapToObject(map);
                             Board.printBoard(board);
                             break;
                         }
                         boolean endOfGame2 = Computer.performComputerMediumModeMove(board, botName, user2);
                         if (endOfGame2) {
-                            Statistics.userVsComputerMediumModeWinCounter2();
+                            Counter.incrementSixthCounter(map);
+                            Counter.writeHashMapToObject(map);
                             Board.printBoard(board);
                             break;
                         }
