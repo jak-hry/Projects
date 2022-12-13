@@ -7,6 +7,10 @@
     <list default="true" id="a43c7628-5cc9-4099-86d9-e5c790361443" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map.txt" beforeDir="false" afterPath="$PROJECT_DIR$/map.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +58,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Statistics">
+  <component name="RunManager" selected="Application.GameBoard">
     <configuration name="Counter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameStats.Counter" />
       <module name="projects.TicTacToe-project.main" />
@@ -184,7 +188,10 @@
       <workItem from="1670752251926" duration="2138000" />
       <workItem from="1670837662394" duration="5875000" />
       <workItem from="1670858241242" duration="4760000" />
-      <workItem from="1670863033451" duration="749000" />
+      <workItem from="1670863033451" duration="2979000" />
+      <workItem from="1670880650620" duration="335000" />
+      <workItem from="1670883019804" duration="43000" />
+      <workItem from="1670934968610" duration="11493000" />
     </task>
     <servers />
   </component>

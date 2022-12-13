@@ -17,6 +17,7 @@ public class GameBoard implements Serializable {
         Scanner scan = new Scanner(System.in);
         char user1 = 'X';
         char user2 = 'O';
+        int symbolCounter = 0;
 
         while (true) {
 
@@ -37,15 +38,26 @@ public class GameBoard implements Serializable {
                     boolean endOfGame1 = User.performUserMove(board, nickName1, user1);
                     if (endOfGame1) {
                         Counter.incrementFirstCounter(map);
-                        Counter.writeHashMapToObject(map);
                         Board.printBoard(board);
                         break;
                     }
+                    symbolCounter++;
+
+                    if (symbolCounter == 9){
+                        System.out.println("\ndraw");
+                        break;
+                    }
+
                     boolean endOfGame2 = User.performUserMove(board, nickName2, user2);
                     if (endOfGame2) {
                         Counter.incrementSecondCounter(map);
-                        Counter.writeHashMapToObject(map);
                         Board.printBoard(board);
+                        break;
+                    }
+                    symbolCounter++;
+
+                    if (symbolCounter == 9){
+                        System.out.println("\ndraw");
                         break;
                     }
                 }
@@ -68,15 +80,26 @@ public class GameBoard implements Serializable {
                         boolean endOfGame1 = User.performUserMove(board, nickName, user1);
                         if (endOfGame1) {
                             Counter.incrementThirdCounter(map);
-                            Counter.writeHashMapToObject(map);
                             Board.printBoard(board);
                             break;
                         }
+                        symbolCounter++;
+
+                        if (symbolCounter == 9){
+                            System.out.println("\ndraw");
+                            break;
+                        }
+
                         boolean endOfGame2 = Computer.performComputerMove(board, botName, user2);
                         if (endOfGame2) {
                             Counter.incrementFourthCounter(map);
-                            Counter.writeHashMapToObject(map);
                             Board.printBoard(board);
+                            break;
+                        }
+                        symbolCounter++;
+
+                        if (symbolCounter == 9){
+                            System.out.println("\ndraw");
                             break;
                         }
                     }
@@ -93,15 +116,26 @@ public class GameBoard implements Serializable {
                         boolean endOfGame1 = User.performUserMove(board, nickName, user1);
                         if (endOfGame1) {
                             Counter.incrementFifthCounter(map);
-                            Counter.writeHashMapToObject(map);
                             Board.printBoard(board);
                             break;
                         }
+                        symbolCounter++;
+
+                        if (symbolCounter == 9){
+                            System.out.println("\ndraw");
+                            break;
+                        }
+
                         boolean endOfGame2 = Computer.performComputerMediumModeMove(board, botName, user2);
                         if (endOfGame2) {
                             Counter.incrementSixthCounter(map);
-                            Counter.writeHashMapToObject(map);
                             Board.printBoard(board);
+                            break;
+                        }
+                        symbolCounter++;
+
+                        if (symbolCounter == 9){
+                            System.out.println("\ndraw");
                             break;
                         }
                     }
@@ -115,6 +149,8 @@ public class GameBoard implements Serializable {
                 System.out.println("\nwrong number, try again");
                 continue;
             }
+
+            Counter.writeHashMapToObject(map);
 
             boolean choose = choiceOfGameEnding();
             if (!choose) {

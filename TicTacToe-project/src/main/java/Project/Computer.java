@@ -26,15 +26,16 @@ public class Computer {
 
         int size = 3;
         int counterX, counterO;
-        char user1 = 'X';
+        char userSymbol = 'X';
         boolean move = true;
 
         while (move) {
+
             for (int row = 0; row < size; row++) {
                 counterX = 0;
                 counterO = 0;
                 for (int column = 0; column < size; column++) {
-                    if (board[row][column] == user1) {
+                    if (board[row][column] == userSymbol) {
                         counterX++;
                     } else if (board[row][column] == symbol) {
                         counterO++;
@@ -55,7 +56,7 @@ public class Computer {
                 counterX = 0;
                 counterO = 0;
                 for (int row = 0; row < size; row++) {
-                    if (board[row][column] == user1) {
+                    if (board[row][column] == userSymbol) {
                         counterX++;
                     } else if (board[row][column] == symbol) {
                         counterO++;
@@ -68,6 +69,41 @@ public class Computer {
                             board[row][column] = symbol;
                             move = false;
                         }
+                    }
+                }
+            }
+
+            for (int i = 0; i < size; i++) {
+                counterX = 0;
+                counterO = 0;
+                if (board[i][i] == userSymbol) {
+                    counterX++;
+                } else if (board[i][i] == symbol) {
+                    counterO++;
+                }
+
+                if (counterX == 2 && counterO == 0) {
+                    if (board[i][i] == '0') {
+                        board[i][i] = symbol;
+                        move = false;
+                    }
+
+                }
+            }
+
+            for (int i = 0; i < size; i++) {
+                counterX = 0;
+                counterO = 0;
+                if (board[size - i - 1][i] == userSymbol) {
+                    counterX++;
+                } else if (board[size - i - 1][i] == symbol) {
+                    counterO++;
+                }
+
+                if (counterX == 2 && counterO == 0) {
+                    if (board[size - i - 1][i] == '0') {
+                        board[size - i - 1][i] = symbol;
+                        move = false;
                     }
                 }
             }

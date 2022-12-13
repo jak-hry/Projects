@@ -31,8 +31,8 @@ public class User {
             try {
                 column = scan.nextInt();
                 scan.nextLine();
-            }catch (InputMismatchException e){
-                System.out.println("Exception - " +e);
+            } catch (InputMismatchException e) {
+                System.out.println("Exception - " + e);
                 continue;
             }
 
@@ -46,10 +46,13 @@ public class User {
             if (board[row][column] == 0) {
                 board[row][column] = symbol;
                 return true;
-            } else {
+
+            } else if (WinChecking.checking(board, symbol)) {
+
                 System.out.println("\nfield occupied, try again - " + symbol);
                 Board.printBoard(board);
                 userMove(board, symbol);
+
             }
         }
 
