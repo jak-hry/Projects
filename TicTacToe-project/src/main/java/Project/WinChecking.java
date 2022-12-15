@@ -7,7 +7,8 @@ public class WinChecking {
         return rowsWinCheck(board, symbol) ||
                 columnsWinCheck(board, symbol) ||
                 checkFirstBevel(board, symbol) ||
-                checkSecondBevel(board, symbol);
+                checkSecondBevel(board, symbol) ||
+                drawCheck(board);
     }
 
     private static boolean rowsWinCheck(char[][] board, char symbol) {
@@ -78,19 +79,20 @@ public class WinChecking {
         return true;
     }
 
-    public static boolean drawCheck(char[][] board, char symbol) {
+    public static boolean drawCheck(char[][] board) {
 
         int size = 3;
 
-        for (int row = 0; row < size; row++) {
-            for (int column = 0; column < size; column++) {
-                if (board[row][column] == '0') {
-                    return true;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (board[i][j] == ' ') {
+                    return false;
                 }
             }
         }
 
-        return false;
+        System.out.println("\ndraw, nobody wins");
+        return true;
     }
 
 }

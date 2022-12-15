@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a43c7628-5cc9-4099-86d9-e5c790361443" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" afterDir="false" />
@@ -22,6 +22,29 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/TicTacToe-project">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="projects" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,6 +73,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jakub/dev/projects&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -58,7 +82,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.GameBoard">
+  <component name="RunManager" selected="Application.Statistics">
     <configuration name="Counter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameStats.Counter" />
       <module name="projects.TicTacToe-project.main" />
@@ -85,8 +109,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameStatsTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameStats.GameStatsTests" />
+    <configuration name="Statistics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GameStats.Statistics" />
       <module name="projects.TicTacToe-project.main" />
       <extension name="coverage">
         <pattern>
@@ -98,12 +122,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Statistics" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameStats.Statistics" />
+    <configuration name="testingBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.testingBoard" />
       <module name="projects.TicTacToe-project.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GameStats.*" />
+          <option name="PATTERN" value="Project.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Statistics" />
+        <item itemvalue="Application.testingBoard" />
         <item itemvalue="Application.Counter" />
         <item itemvalue="JUnit.All in projects (1)" />
         <item itemvalue="Application.GameBoard" />
-        <item itemvalue="Application.GameStatsTests" />
-        <item itemvalue="Application.Statistics" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +215,19 @@
       <workItem from="1670863033451" duration="2979000" />
       <workItem from="1670880650620" duration="335000" />
       <workItem from="1670883019804" duration="43000" />
-      <workItem from="1670934968610" duration="11493000" />
+      <workItem from="1670934968610" duration="15721000" />
+      <workItem from="1670955786323" duration="193000" />
+      <workItem from="1670961953314" duration="4919000" />
+      <workItem from="1671014524292" duration="52000" />
+      <workItem from="1671014695209" duration="4033000" />
+      <workItem from="1671019184464" duration="1997000" />
+      <workItem from="1671030276271" duration="796000" />
+      <workItem from="1671036316154" duration="172000" />
+      <workItem from="1671037837620" duration="7493000" />
+      <workItem from="1671058643109" duration="1953000" />
+      <workItem from="1671063145186" duration="871000" />
+      <workItem from="1671075702498" duration="20000" />
+      <workItem from="1671075770508" duration="30000" />
     </task>
     <servers />
   </component>

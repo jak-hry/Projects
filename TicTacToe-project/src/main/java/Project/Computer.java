@@ -2,6 +2,8 @@ package Project;
 
 import java.util.Random;
 
+import static Project.WinChecking.*;
+
 public class Computer {
 
     private static boolean computerEasyModeMove(char[][] board, char symbol) {
@@ -11,7 +13,7 @@ public class Computer {
         int row = random.nextInt(3);
         int column = random.nextInt(3);
 
-        if (board[row][column] == 0) {
+        if (board[row][column] == ' ') {
             board[row][column] = symbol;
             return true;
 
@@ -32,8 +34,8 @@ public class Computer {
         while (move) {
 
             for (int row = 0; row < size; row++) {
-                counterX = 0;
                 counterO = 0;
+                counterX = 0;
                 for (int column = 0; column < size; column++) {
                     if (board[row][column] == userSymbol) {
                         counterX++;
@@ -44,7 +46,7 @@ public class Computer {
 
                 if (counterX == 2 && counterO == 0) {
                     for (int column = 0; column < size; column++) {
-                        if (board[row][column] == '0') {
+                        if (board[row][column] == ' ') {
                             board[row][column] = symbol;
                             move = false;
                         }
@@ -52,9 +54,13 @@ public class Computer {
                 }
             }
 
+            if (!move){
+                break;
+            }
+
             for (int column = 0; column < size; column++) {
-                counterX = 0;
                 counterO = 0;
+                counterX = 0;
                 for (int row = 0; row < size; row++) {
                     if (board[row][column] == userSymbol) {
                         counterX++;
@@ -65,7 +71,7 @@ public class Computer {
 
                 if (counterX == 2 && counterO == 0) {
                     for (int row = 0; row < size; row++) {
-                        if (board[row][column] == '0') {
+                        if (board[row][column] == ' ') {
                             board[row][column] = symbol;
                             move = false;
                         }
@@ -73,9 +79,13 @@ public class Computer {
                 }
             }
 
+            if (!move){
+                break;
+            }
+
+            counterO = 0;
+            counterX = 0;
             for (int i = 0; i < size; i++) {
-                counterX = 0;
-                counterO = 0;
                 if (board[i][i] == userSymbol) {
                     counterX++;
                 } else if (board[i][i] == symbol) {
@@ -83,17 +93,22 @@ public class Computer {
                 }
 
                 if (counterX == 2 && counterO == 0) {
-                    if (board[i][i] == '0') {
-                        board[i][i] = symbol;
-                        move = false;
+                    for (int j = 0; j < size; j++) {
+                        if (board[j][j] == ' ') {
+                            board[j][j] = symbol;
+                            move = false;
+                        }
                     }
-
                 }
             }
 
+            if (!move){
+                break;
+            }
+
+            counterO = 0;
+            counterX = 0;
             for (int i = 0; i < size; i++) {
-                counterX = 0;
-                counterO = 0;
                 if (board[size - i - 1][i] == userSymbol) {
                     counterX++;
                 } else if (board[size - i - 1][i] == symbol) {
@@ -101,11 +116,17 @@ public class Computer {
                 }
 
                 if (counterX == 2 && counterO == 0) {
-                    if (board[size - i - 1][i] == '0') {
-                        board[size - i - 1][i] = symbol;
-                        move = false;
+                    for (int j = 0; j < size; j++) {
+                        if (board[size - j - 1][j] == ' ') {
+                            board[size - j - 1][j] = symbol;
+                            move = false;
+                        }
                     }
                 }
+            }
+
+            if (!move){
+                break;
             }
 
             if (move) {
@@ -126,7 +147,7 @@ public class Computer {
         System.out.println("\n" + computerMode + " turn - " + symbol);
         boolean computerMove = computerEasyModeMove(board, symbol);
         if (computerMove) {
-            won = WinChecking.checking(board, symbol);
+            won = checking(board, symbol);
         }
 
         return won;
@@ -139,9 +160,9 @@ public class Computer {
         Board.printBoard(board);
 
         System.out.println("\n" + computerMode + " your turn - " + symbol);
-        boolean computerMove = Computer.computerMediumModeMove(board, symbol);
+        boolean computerMove = computerMediumModeMove(board, symbol);
         if (computerMove) {
-            won = WinChecking.checking(board, symbol);
+            won = checking(board, symbol);
         }
 
         return won;

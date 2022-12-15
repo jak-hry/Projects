@@ -1,5 +1,7 @@
 package Project;
 
+import java.util.Arrays;
+
 public class Board {
 
     public static void printBoard(char[][] board) {

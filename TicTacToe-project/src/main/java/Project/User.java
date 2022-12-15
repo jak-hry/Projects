@@ -3,6 +3,8 @@ package Project;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import static Project.WinChecking.*;
+
 public class User {
 
     private static boolean userMove(char[][] board, char symbol) {
@@ -43,11 +45,11 @@ public class User {
             }
 
 
-            if (board[row][column] == 0) {
+            if (board[row][column] == ' ') {
                 board[row][column] = symbol;
                 return true;
 
-            } else if (WinChecking.checking(board, symbol)) {
+            } else if (checking(board, symbol)) {
 
                 System.out.println("\nfield occupied, try again - " + symbol);
                 Board.printBoard(board);
@@ -68,7 +70,7 @@ public class User {
         System.out.println("\n" + userName + " your turn - " + symbol);
         boolean userMove = userMove(board, symbol);
         if (userMove) {
-            won = WinChecking.checking(board, symbol);
+            won = checking(board, symbol);
         }
 
         return won;

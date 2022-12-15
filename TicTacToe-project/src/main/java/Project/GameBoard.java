@@ -1,28 +1,32 @@
 package Project;
 
-import GameStats.Counter;
 import GameStats.Result;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import static GameStats.Counter.*;
+import static Project.Board.printBoard;
+import static Project.Computer.performComputerMediumModeMove;
+import static Project.Computer.performComputerMove;
+import static Project.User.performUserMove;
 
 public class GameBoard implements Serializable {
 
     public static void main(String[] args) {
 
-        HashMap<String, Result> map = Counter.readHashMapWithObject();
+        HashMap<String, Result> map = readHashMapWithObject();
 
         Scanner scan = new Scanner(System.in);
         char user1 = 'X';
         char user2 = 'O';
-        int symbolCounter = 0;
 
         while (true) {
 
-            int choose1 = 0;
-            int chooseMode = selectingAGameMode(choose1);
+            int chooseMode = selectingAGameMode();
 
             if (chooseMode == 1) {
 
@@ -32,40 +36,30 @@ public class GameBoard implements Serializable {
                 String nickName2 = scan.nextLine();
 
                 char[][] board = new char[3][3];
+                for (char[] chars : board) {
+                    Arrays.fill(chars, ' ');
+                }
 
                 while (true) {
 
-                    boolean endOfGame1 = User.performUserMove(board, nickName1, user1);
+                    boolean endOfGame1 = performUserMove(board, nickName1, user1);
                     if (endOfGame1) {
-                        Counter.incrementFirstCounter(map);
-                        Board.printBoard(board);
+                        incrementFirstCounter(map);
+                        printBoard(board);
                         break;
                     }
-                    symbolCounter++;
-
-                    if (symbolCounter == 9){
-                        System.out.println("\ndraw");
-                        break;
-                    }
-
-                    boolean endOfGame2 = User.performUserMove(board, nickName2, user2);
+                    boolean endOfGame2 = performUserMove(board, nickName2, user2);
                     if (endOfGame2) {
-                        Counter.incrementSecondCounter(map);
-                        Board.printBoard(board);
+                        incrementSecondCounter(map);
+                        printBoard(board);
                         break;
                     }
-                    symbolCounter++;
 
-                    if (symbolCounter == 9){
-                        System.out.println("\ndraw");
-                        break;
-                    }
                 }
 
             } else if (chooseMode == 2) {
 
-                int choose2 = 0;
-                int chooseDifficulty = selectingADifficultyLevel(choose2);
+                int chooseDifficulty = selectingADifficultyLevel();
 
                 if (chooseDifficulty == 1) {
 
@@ -74,32 +68,22 @@ public class GameBoard implements Serializable {
                     String botName = "computerEasyMode";
 
                     char[][] board = new char[3][3];
+                    for (char[] chars : board) {
+                        Arrays.fill(chars, ' ');
+                    }
 
                     while (true) {
 
-                        boolean endOfGame1 = User.performUserMove(board, nickName, user1);
+                        boolean endOfGame1 = performUserMove(board, nickName, user1);
                         if (endOfGame1) {
-                            Counter.incrementThirdCounter(map);
-                            Board.printBoard(board);
+                            incrementThirdCounter(map);
+                            printBoard(board);
                             break;
                         }
-                        symbolCounter++;
-
-                        if (symbolCounter == 9){
-                            System.out.println("\ndraw");
-                            break;
-                        }
-
-                        boolean endOfGame2 = Computer.performComputerMove(board, botName, user2);
+                        boolean endOfGame2 = performComputerMove(board, botName, user2);
                         if (endOfGame2) {
-                            Counter.incrementFourthCounter(map);
-                            Board.printBoard(board);
-                            break;
-                        }
-                        symbolCounter++;
-
-                        if (symbolCounter == 9){
-                            System.out.println("\ndraw");
+                            incrementFourthCounter(map);
+                            printBoard(board);
                             break;
                         }
                     }
@@ -110,32 +94,22 @@ public class GameBoard implements Serializable {
                     String botName = "computerMediumMode";
 
                     char[][] board = new char[3][3];
+                    for (char[] chars : board) {
+                        Arrays.fill(chars, ' ');
+                    }
 
                     while (true) {
 
-                        boolean endOfGame1 = User.performUserMove(board, nickName, user1);
+                        boolean endOfGame1 = performUserMove(board, nickName, user1);
                         if (endOfGame1) {
-                            Counter.incrementFifthCounter(map);
-                            Board.printBoard(board);
+                            incrementFifthCounter(map);
+                            printBoard(board);
                             break;
                         }
-                        symbolCounter++;
-
-                        if (symbolCounter == 9){
-                            System.out.println("\ndraw");
-                            break;
-                        }
-
-                        boolean endOfGame2 = Computer.performComputerMediumModeMove(board, botName, user2);
+                        boolean endOfGame2 = performComputerMediumModeMove(board, botName, user2);
                         if (endOfGame2) {
-                            Counter.incrementSixthCounter(map);
-                            Board.printBoard(board);
-                            break;
-                        }
-                        symbolCounter++;
-
-                        if (symbolCounter == 9){
-                            System.out.println("\ndraw");
+                            incrementSixthCounter(map);
+                            printBoard(board);
                             break;
                         }
                     }
@@ -150,7 +124,7 @@ public class GameBoard implements Serializable {
                 continue;
             }
 
-            Counter.writeHashMapToObject(map);
+            writeHashMapToObject(map);
 
             boolean choose = choiceOfGameEnding();
             if (!choose) {
@@ -160,8 +134,10 @@ public class GameBoard implements Serializable {
         }
     }
 
-    private static int selectingAGameMode(int choose) {
+    private static int selectingAGameMode() {
+
         Scanner scan = new Scanner(System.in);
+        int choose = 0;
 
         System.out.println("select a game mode");
         System.out.println("1 - user vs user");
@@ -176,8 +152,10 @@ public class GameBoard implements Serializable {
         return choose;
     }
 
-    private static int selectingADifficultyLevel(int choose) {
+    private static int selectingADifficultyLevel() {
+
         Scanner scan = new Scanner(System.in);
+        int choose = 0;
 
         System.out.println("Choose the difficulty level");
         System.out.println("1 - Easy level");
@@ -193,6 +171,7 @@ public class GameBoard implements Serializable {
     }
 
     private static boolean choiceOfGameEnding() {
+
         Scanner scan = new Scanner(System.in);
         boolean playAgain = true;
 
