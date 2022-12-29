@@ -18,7 +18,8 @@ public class GameBoard implements Serializable {
 
     public static void main(String[] args) {
 
-        HashMap<String, Result> map = readHashMapWithObject();
+        String fileName = "statisticsMap.txt";
+        HashMap<String, Result> map = readHashMapWithObject(fileName);
 
         Scanner scan = new Scanner(System.in);
         char user1 = 'X';
@@ -124,7 +125,7 @@ public class GameBoard implements Serializable {
                 continue;
             }
 
-            writeHashMapToObject(map);
+            writeHashMapToObject(map, fileName);
 
             boolean choose = choiceOfGameEnding();
             if (!choose) {

@@ -3,9 +3,13 @@ package GameStats;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import static GameStats.Counter.readHashMapWithObject;
+
 public class Statistics {
 
     public static void main(String[] args) {
+
+
 
         System.out.println("\n----------------------------------------------------");
         System.out.println("\n\t\t\t\t player VS player\n");
@@ -36,21 +40,12 @@ public class Statistics {
 
     private static ArrayList<String> getWinPercentage() {
 
-        float percentWinPVP1, percentWinPVP2, percentWinPVC1, percentWinPVC2, percentWinPVC3, percentWinPVC4;
-
-        percentWinPVP1 = getPercentWins().get(0);
-        percentWinPVP2 = getPercentWins().get(1);
-        percentWinPVC1 = getPercentWins().get(2);
-        percentWinPVC2 = getPercentWins().get(3);
-        percentWinPVC3 = getPercentWins().get(4);
-        percentWinPVC4 = getPercentWins().get(5);
-
-        String winPercentage1 = String.format("%.02f", percentWinPVP1);
-        String winPercentage2 = String.format("%.02f", percentWinPVP2);
-        String winPercentage3 = String.format("%.02f", percentWinPVC1);
-        String winPercentage4 = String.format("%.02f", percentWinPVC2);
-        String winPercentage5 = String.format("%.02f", percentWinPVC3);
-        String winPercentage6 = String.format("%.02f", percentWinPVC4);
+        String winPercentage1 = String.format("%.02f", getPercentWins().get(0));
+        String winPercentage2 = String.format("%.02f", getPercentWins().get(1));
+        String winPercentage3 = String.format("%.02f", getPercentWins().get(2));
+        String winPercentage4 = String.format("%.02f", getPercentWins().get(3));
+        String winPercentage5 = String.format("%.02f", getPercentWins().get(4));
+        String winPercentage6 = String.format("%.02f", getPercentWins().get(5));
 
         ArrayList<String> list = new ArrayList<>();
         list.add(winPercentage1);
@@ -67,7 +62,8 @@ public class Statistics {
 
         int resultPVP1, resultPVP2, resultPVC1, resultPVC2, resultPVC3, resultPVC4;
 
-        HashMap<String, Result> testingMap = Counter.readHashMapWithObject();
+        String fileName = "statisticsMap.txt";
+        HashMap<String, Result> testingMap = readHashMapWithObject(fileName);
 
         resultPVP1 = getPlayer1Wins("PVP", testingMap);
         resultPVP2 = getPlayer2Wins("PVP", testingMap);
@@ -89,19 +85,11 @@ public class Statistics {
 
     private static ArrayList<Integer> getSumOfWins() {
 
-        int resultPVP1, resultPVP2, resultPVC1, resultPVC2, resultPVC3, resultPVC4;
         int sumOfWinsPVP, sumOfWinsPVC1, sumOfWinsPVC2, totalWins;
 
-        resultPVP1 = getResults().get(0);
-        resultPVP2 = getResults().get(1);
-        resultPVC1 = getResults().get(2);
-        resultPVC2 = getResults().get(3);
-        resultPVC3 = getResults().get(4);
-        resultPVC4 = getResults().get(5);
-
-        sumOfWinsPVP = resultPVP1 + resultPVP2;
-        sumOfWinsPVC1 = resultPVC1 + resultPVC2;
-        sumOfWinsPVC2 = resultPVC3 + resultPVC4;
+        sumOfWinsPVP = getResults().get(0) + getResults().get(1);
+        sumOfWinsPVC1 = getResults().get(2) + getResults().get(3);
+        sumOfWinsPVC2 = getResults().get(4) + getResults().get(5);
         totalWins = sumOfWinsPVP + sumOfWinsPVC1 + sumOfWinsPVC2;
 
         ArrayList<Integer> list = new ArrayList<>();

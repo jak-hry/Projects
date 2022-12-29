@@ -5,22 +5,23 @@ import java.util.HashMap;
 
 public class Counter implements Serializable {
 
-    public static void main(String[] args) {
+    public static void writeStatisticsHashMapToObject() {
 
         HashMap<String, Result> map = new HashMap<>();
         map.put("PVP", new Result());
         map.put("PVC1", new Result());
         map.put("PVC2", new Result());
 
-        writeHashMapToObject(map);
+        String fileName = "statisticsMap.txt";
+        writeHashMapToObject(map, fileName);
 
     }
 
-    public static void writeHashMapToObject(HashMap<String, Result> map) {
+    public static void writeHashMapToObject(HashMap<String, Result> map, String fileName) {
 
         try {
 
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("map.txt"));
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName));
             out.writeObject(map);
             out.close();
 
@@ -29,11 +30,11 @@ public class Counter implements Serializable {
         }
     }
 
-    public static HashMap<String, Result> readHashMapWithObject() {
+    public static HashMap<String, Result> readHashMapWithObject(String fileName) {
 
         try {
 
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream("map.txt"));
+            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName));
             HashMap<String, Result> readMap = (HashMap<String, Result>) ois.readObject();
             ois.close();
             return readMap;
