@@ -2,7 +2,8 @@ package Project;
 
 import java.util.Random;
 
-import static Project.WinChecking.*;
+import static Project.Board.printBoard;
+import static Project.WinChecking.checking;
 
 public class Computer {
 
@@ -54,7 +55,7 @@ public class Computer {
                 }
             }
 
-            if (!move){
+            if (!move) {
                 break;
             }
 
@@ -79,7 +80,7 @@ public class Computer {
                 }
             }
 
-            if (!move){
+            if (!move) {
                 break;
             }
 
@@ -102,7 +103,7 @@ public class Computer {
                 }
             }
 
-            if (!move){
+            if (!move) {
                 break;
             }
 
@@ -125,13 +126,11 @@ public class Computer {
                 }
             }
 
-            if (!move){
-                break;
-            }
-
             if (move) {
                 computerEasyModeMove(board, symbol);
                 return true;
+            } else {
+                break;
             }
         }
 
@@ -142,7 +141,7 @@ public class Computer {
 
         boolean won = false;
 
-        Board.printBoard(board);
+        printBoard(board);
 
         System.out.println("\n" + computerMode + " turn - " + symbol);
         boolean computerMove = computerEasyModeMove(board, symbol);
@@ -157,7 +156,7 @@ public class Computer {
 
         boolean won = false;
 
-        Board.printBoard(board);
+        printBoard(board);
 
         System.out.println("\n" + computerMode + " your turn - " + symbol);
         boolean computerMove = computerMediumModeMove(board, symbol);
@@ -167,4 +166,5 @@ public class Computer {
 
         return won;
     }
+
 }

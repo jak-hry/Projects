@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a43c7628-5cc9-4099-86d9-e5c790361443" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Tournament/Match.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Tournament/PlayersList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Tournament/Tournament.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/16PlayersList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2PlayersList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/4PlayersList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8PlayersList" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Counter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/Computer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/GameBoard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Project/WinChecking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Tournament/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Tournament/Match.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Tournament/PlayersList.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Tournament/PlayersList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Tournament/Tournament.java" beforeDir="false" afterPath="$PROJECT_DIR$/TicTacToe-project/src/main/java/Tournament/Tournament.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/statisticsMap.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,25 +91,12 @@
   }
 }</component>
   <component name="RunManager" selected="Application.Tournament">
-    <configuration name="Counter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameStats.Counter" />
+    <configuration name="GameBoard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project.GameBoard" />
       <module name="projects.TicTacToe-project.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GameStats.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Player" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Tournament.Player" />
-      <module name="projects.TicTacToe-project.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tournament.*" />
+          <option name="PATTERN" value="Project.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,12 +143,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in projects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="projects" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in projects" />
+        <item itemvalue="Application.GameBoard" />
         <item itemvalue="Application.Tournament" />
         <item itemvalue="Application.Statistics" />
         <item itemvalue="Application.testingBoard" />
-        <item itemvalue="Application.Counter" />
       </list>
     </recent_temporary>
   </component>
@@ -248,6 +251,22 @@
       <workItem from="1672320570666" duration="44000" />
       <workItem from="1672324532730" duration="601000" />
       <workItem from="1672328705907" duration="493000" />
+      <workItem from="1672329300431" duration="344000" />
+      <workItem from="1672335874572" duration="1410000" />
+      <workItem from="1672338766965" duration="1266000" />
+      <workItem from="1672348002138" duration="1421000" />
+      <workItem from="1672349480120" duration="1338000" />
+      <workItem from="1672354845493" duration="826000" />
+      <workItem from="1672356065385" duration="29000" />
+      <workItem from="1672399394370" duration="3198000" />
+      <workItem from="1672402633771" duration="3330000" />
+      <workItem from="1672414863442" duration="3611000" />
+      <workItem from="1672422186352" duration="3811000" />
+      <workItem from="1672435121168" duration="927000" />
+      <workItem from="1672436080017" duration="3306000" />
+      <workItem from="1672439536119" duration="225000" />
+      <workItem from="1672440150519" duration="11000" />
+      <workItem from="1672440203355" duration="245000" />
     </task>
     <servers />
   </component>
@@ -264,16 +283,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/TicTacToe-project/src/main/java/GameStats/Statistics.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

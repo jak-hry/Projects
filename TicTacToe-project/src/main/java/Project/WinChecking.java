@@ -7,8 +7,7 @@ public class WinChecking {
         return rowsWinCheck(board, symbol) ||
                 columnsWinCheck(board, symbol) ||
                 checkFirstBevel(board, symbol) ||
-                checkSecondBevel(board, symbol) ||
-                drawCheck(board);
+                checkSecondBevel(board, symbol);
     }
 
     private static boolean rowsWinCheck(char[][] board, char symbol) {

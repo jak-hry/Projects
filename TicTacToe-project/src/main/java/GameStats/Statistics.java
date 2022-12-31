@@ -4,12 +4,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import static GameStats.Counter.readHashMapWithObject;
+import static GameStats.Counter.writeStatsHashMap;
 
 public class Statistics {
 
     public static void main(String[] args) {
 
+        String fileName = "statisticsMap.txt";
 
+        if (readHashMapWithObject(fileName) == null){
+            writeStatsHashMap();
+        }
 
         System.out.println("\n----------------------------------------------------");
         System.out.println("\n\t\t\t\t player VS player\n");

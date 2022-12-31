@@ -13,6 +13,7 @@ import static Project.Board.printBoard;
 import static Project.Computer.performComputerMediumModeMove;
 import static Project.Computer.performComputerMove;
 import static Project.User.performUserMove;
+import static Project.WinChecking.drawCheck;
 
 public class GameBoard implements Serializable {
 
@@ -49,10 +50,16 @@ public class GameBoard implements Serializable {
                         printBoard(board);
                         break;
                     }
+                    if (drawCheck(board)){
+                        break;
+                    }
                     boolean endOfGame2 = performUserMove(board, nickName2, user2);
                     if (endOfGame2) {
                         incrementSecondCounter(map);
                         printBoard(board);
+                        break;
+                    }
+                    if (drawCheck(board)){
                         break;
                     }
 
@@ -81,10 +88,16 @@ public class GameBoard implements Serializable {
                             printBoard(board);
                             break;
                         }
+                        if (drawCheck(board)){
+                            break;
+                        }
                         boolean endOfGame2 = performComputerMove(board, botName, user2);
                         if (endOfGame2) {
                             incrementFourthCounter(map);
                             printBoard(board);
+                            break;
+                        }
+                        if (drawCheck(board)){
                             break;
                         }
                     }
@@ -107,10 +120,16 @@ public class GameBoard implements Serializable {
                             printBoard(board);
                             break;
                         }
+                        if (drawCheck(board)){
+                            break;
+                        }
                         boolean endOfGame2 = performComputerMediumModeMove(board, botName, user2);
                         if (endOfGame2) {
                             incrementSixthCounter(map);
                             printBoard(board);
+                            break;
+                        }
+                        if (drawCheck(board)){
                             break;
                         }
                     }
@@ -125,14 +144,14 @@ public class GameBoard implements Serializable {
                 continue;
             }
 
-            writeHashMapToObject(map, fileName);
+            writeStatsHashMapToObject(map, fileName);
 
             boolean choose = choiceOfGameEnding();
             if (!choose) {
                 break;
             }
-
         }
+
     }
 
     private static int selectingAGameMode() {
@@ -150,6 +169,7 @@ public class GameBoard implements Serializable {
         } catch (InputMismatchException e) {
             System.out.println("\nException - " + e);
         }
+
         return choose;
     }
 
@@ -168,6 +188,7 @@ public class GameBoard implements Serializable {
         } catch (InputMismatchException e) {
             System.out.println("\nException - " + e);
         }
+
         return choose;
     }
 
@@ -198,6 +219,7 @@ public class GameBoard implements Serializable {
 
             System.out.println();
         }
+
         return playAgain;
     }
 

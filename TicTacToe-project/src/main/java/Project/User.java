@@ -3,7 +3,8 @@ package Project;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static Project.WinChecking.*;
+import static Project.Board.printBoard;
+import static Project.WinChecking.checking;
 
 public class User {
 
@@ -24,7 +25,8 @@ public class User {
             }
 
             if (row >= 3) {
-                System.out.println("too high coordinates, try again - " + symbol);
+                System.out.println("\ntoo high coordinates, try again - " + symbol);
+                printBoard(board);
                 continue;
             }
 
@@ -40,8 +42,9 @@ public class User {
 
 
             if (column >= 3) {
-                System.out.println("too high coordinates, try again - " + symbol);
-                break;
+                System.out.println("\ntoo high coordinates, try again - " + symbol);
+                printBoard(board);
+                continue;
             }
 
 
@@ -49,12 +52,12 @@ public class User {
                 board[row][column] = symbol;
                 return true;
 
-            } else if (checking(board, symbol)) {
+            } else {
 
                 System.out.println("\nfield occupied, try again - " + symbol);
-                Board.printBoard(board);
+                printBoard(board);
                 userMove(board, symbol);
-
+                break;
             }
         }
 
@@ -65,7 +68,7 @@ public class User {
 
         boolean won = false;
 
-        Board.printBoard(board);
+        printBoard(board);
 
         System.out.println("\n" + userName + " your turn - " + symbol);
         boolean userMove = userMove(board, symbol);

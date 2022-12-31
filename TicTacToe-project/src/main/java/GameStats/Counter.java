@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class Counter implements Serializable {
 
-    public static void writeStatisticsHashMapToObject() {
+    public static void writeStatsHashMap() {
 
         HashMap<String, Result> map = new HashMap<>();
         map.put("PVP", new Result());
@@ -13,11 +13,11 @@ public class Counter implements Serializable {
         map.put("PVC2", new Result());
 
         String fileName = "statisticsMap.txt";
-        writeHashMapToObject(map, fileName);
+        writeStatsHashMapToObject(map, fileName);
 
     }
 
-    public static void writeHashMapToObject(HashMap<String, Result> map, String fileName) {
+    public static void writeStatsHashMapToObject(HashMap<String, Result> map, String fileName) {
 
         try {
 

@@ -2,57 +2,52 @@ package Tournament;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
+
+import static Tournament.Tournament.writeTournamentHashMap;
 
 
 public class PlayersList implements Serializable {
 
-    public static HashMap<String, ArrayList<String>> createPlayersList() {
+    public static void createPlayersList(String key, int size) {
 
         Scanner scan = new Scanner(System.in);
-        String player1, player2, player3, player4,
-                player5, player6, player7, player8,
-                player9, player10, player11, player12,
-                player13, player14, player15, player16;
 
-        System.out.println("write a list of 16 people participating in the tournament");
+        String fileName = "tournamentMap.txt";
+        ArrayList<String> playersList = new ArrayList<>();
 
-        player1 = scan.nextLine();
-        player2 = scan.nextLine();
-        player3 = scan.nextLine();
-        player4 = scan.nextLine();
-        player5 = scan.nextLine();
-        player6 = scan.nextLine();
-        player7 = scan.nextLine();
-        player8 = scan.nextLine();
-        player9 = scan.nextLine();
-        player10 = scan.nextLine();
-        player11 = scan.nextLine();
-        player12 = scan.nextLine();
-        player13 = scan.nextLine();
-        player14 = scan.nextLine();
-        player15 = scan.nextLine();
-        player16 = scan.nextLine();
+        if (size == 16) {
+            System.out.println("write a list of 16 people participating in the 1/16 tournament");
+        } else if (size == 8) {
+            System.out.println("write a list of 8 people participating in the quarter-finals");
+        } else if ( size == 4) {
+            System.out.println("write a list of 4 people participating in the semi-finals");
+        } else if ( size == 2) {
+            System.out.println("write a list of 2 people participating in the finals");
+        }
 
-        HashMap<String, ArrayList<String>> playersList = new HashMap<>();
-        String fileName = "16PlayersList";
+        for (int i = 0; playersList.size() < size; i++) {
 
-        playersList.put(fileName, new ArrayList<>(Arrays.asList(player1, player2, player3, player4,
-                player5, player6, player7, player8,
-                player9, player10, player11, player12,
-                player13, player14, player15, player16)));
+            String playerName = scan.nextLine();
 
+            if (playersList.contains(playerName)) {
+                System.out.println("\nNazwa gracza już istnieje, wybierz inną nazwę\n");
+            } else {
+                playersList.add(playerName);
+            }
+        }
 
-        writePlayersMapToObject(playersList, fileName);
+        writeTournamentHashMap();
+        HashMap<String, ArrayList<String>> map = readPlayersMapWithObject(fileName);
+        map.put(key, playersList);
 
-        return playersList;
+        writePlayersMapToObject(map, fileName);
+
     }
 
-    public static void writePlayersList(String fileName) {
+    public static void writePlayersList(HashMap<String, ArrayList<String>> playersList, String fileName) {
 
-        HashMap<String, ArrayList<String>> playersList = new HashMap<>();
         playersList.put(fileName, new ArrayList<>());
 
         writePlayersMapToObject(playersList, fileName);
