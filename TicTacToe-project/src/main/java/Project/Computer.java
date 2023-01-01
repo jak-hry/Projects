@@ -9,18 +9,22 @@ public class Computer {
 
     private static boolean computerEasyModeMove(char[][] board, char symbol) {
 
-        Random random = new Random();
+            Random random = new Random();
 
-        int row = random.nextInt(3);
-        int column = random.nextInt(3);
+            while (true) {
 
-        if (board[row][column] == ' ') {
-            board[row][column] = symbol;
-            return true;
+                int row = random.nextInt(3);
+                int column = random.nextInt(3);
 
-        } else {
-            computerEasyModeMove(board, symbol);
-        }
+                if (board[row][column] == ' ') {
+                    board[row][column] = symbol;
+                    return true;
+
+                } else {
+                    computerEasyModeMove(board, symbol);
+                    break;
+                }
+            }
 
         return false;
     }

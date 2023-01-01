@@ -20,11 +20,16 @@ public class GameBoard implements Serializable {
     public static void main(String[] args) {
 
         String fileName = "statisticsMap.txt";
-        HashMap<String, Result> map = readHashMapWithObject(fileName);
 
         Scanner scan = new Scanner(System.in);
         char user1 = 'X';
         char user2 = 'O';
+
+        if (readHashMapWithObject(fileName) == null){
+            writeStatsHashMap();
+        }
+
+        HashMap<String, Result> map = readHashMapWithObject(fileName);
 
         while (true) {
 
@@ -32,38 +37,7 @@ public class GameBoard implements Serializable {
 
             if (chooseMode == 1) {
 
-                System.out.println("Enter the name of the first user");
-                String nickName1 = scan.nextLine();
-                System.out.println("Enter the name of the second user");
-                String nickName2 = scan.nextLine();
-
-                char[][] board = new char[3][3];
-                for (char[] chars : board) {
-                    Arrays.fill(chars, ' ');
-                }
-
-                while (true) {
-
-                    boolean endOfGame1 = performUserMove(board, nickName1, user1);
-                    if (endOfGame1) {
-                        incrementFirstCounter(map);
-                        printBoard(board);
-                        break;
-                    }
-                    if (drawCheck(board)){
-                        break;
-                    }
-                    boolean endOfGame2 = performUserMove(board, nickName2, user2);
-                    if (endOfGame2) {
-                        incrementSecondCounter(map);
-                        printBoard(board);
-                        break;
-                    }
-                    if (drawCheck(board)){
-                        break;
-                    }
-
-                }
+                playerVsPlayerMatch(scan, user1, user2, map);
 
             } else if (chooseMode == 2) {
 
@@ -71,68 +45,11 @@ public class GameBoard implements Serializable {
 
                 if (chooseDifficulty == 1) {
 
-                    System.out.println("Enter username");
-                    String nickName = scan.nextLine();
-                    String botName = "computerEasyMode";
+                    playerVsComputerEasyModeMatch(scan, user1, user2, map);
 
-                    char[][] board = new char[3][3];
-                    for (char[] chars : board) {
-                        Arrays.fill(chars, ' ');
-                    }
-
-                    while (true) {
-
-                        boolean endOfGame1 = performUserMove(board, nickName, user1);
-                        if (endOfGame1) {
-                            incrementThirdCounter(map);
-                            printBoard(board);
-                            break;
-                        }
-                        if (drawCheck(board)){
-                            break;
-                        }
-                        boolean endOfGame2 = performComputerMove(board, botName, user2);
-                        if (endOfGame2) {
-                            incrementFourthCounter(map);
-                            printBoard(board);
-                            break;
-                        }
-                        if (drawCheck(board)){
-                            break;
-                        }
-                    }
                 } else if (chooseDifficulty == 2) {
 
-                    System.out.println("Enter username");
-                    String nickName = scan.nextLine();
-                    String botName = "computerMediumMode";
-
-                    char[][] board = new char[3][3];
-                    for (char[] chars : board) {
-                        Arrays.fill(chars, ' ');
-                    }
-
-                    while (true) {
-
-                        boolean endOfGame1 = performUserMove(board, nickName, user1);
-                        if (endOfGame1) {
-                            incrementFifthCounter(map);
-                            printBoard(board);
-                            break;
-                        }
-                        if (drawCheck(board)){
-                            break;
-                        }
-                        boolean endOfGame2 = performComputerMediumModeMove(board, botName, user2);
-                        if (endOfGame2) {
-                            incrementSixthCounter(map);
-                            printBoard(board);
-                            break;
-                        }
-                        if (drawCheck(board)){
-                            break;
-                        }
-                    }
+                    playerVsComputerMediumModeMatch(scan, user1, user2, map);
 
                 } else {
                     System.out.println("\nwrong number, try again\n");
@@ -152,6 +69,109 @@ public class GameBoard implements Serializable {
             }
         }
 
+    }
+
+    private static void playerVsPlayerMatch(Scanner scan, char user1, char user2, HashMap<String, Result> map) {
+
+        System.out.println("Enter the name of the first user");
+        String nickName1 = scan.nextLine();
+        System.out.println("Enter the name of the second user");
+        String nickName2 = scan.nextLine();
+
+        char[][] board = new char[3][3];
+        for (char[] chars : board) {
+            Arrays.fill(chars, ' ');
+        }
+
+        while (true) {
+
+            boolean endOfGame1 = performUserMove(board, nickName1, user1);
+            if (endOfGame1) {
+                incrementFirstCounter(map);
+                printBoard(board);
+                break;
+            }
+            if (drawCheck(board)){
+                break;
+            }
+            boolean endOfGame2 = performUserMove(board, nickName2, user2);
+            if (endOfGame2) {
+                incrementSecondCounter(map);
+                printBoard(board);
+                break;
+            }
+            if (drawCheck(board)){
+                break;
+            }
+        }
+    }
+
+    private static void playerVsComputerEasyModeMatch(Scanner scan, char user1, char user2, HashMap<String, Result> map) {
+
+        System.out.println("Enter username");
+        String nickName = scan.nextLine();
+        String botName = "computerEasyMode";
+
+        char[][] board = new char[3][3];
+        for (char[] chars : board) {
+            Arrays.fill(chars, ' ');
+        }
+
+        while (true) {
+
+            boolean endOfGame1 = performUserMove(board, nickName, user1);
+            if (endOfGame1) {
+                incrementThirdCounter(map);
+                printBoard(board);
+                break;
+            }
+            if (drawCheck(board)){
+                break;
+            }
+            boolean endOfGame2 = performComputerMove(board, botName, user2);
+            if (endOfGame2) {
+                incrementFourthCounter(map);
+                printBoard(board);
+                break;
+            }
+            if (drawCheck(board)){
+                break;
+            }
+        }
+    }
+
+    private static void playerVsComputerMediumModeMatch(Scanner scan, char user1, char user2, HashMap<String, Result> map) {
+
+        System.out.println("Enter username");
+        String nickName = scan.nextLine();
+        String botName = "computerMediumMode";
+
+        char[][] board = new char[3][3];
+        for (char[] chars : board) {
+            Arrays.fill(chars, ' ');
+        }
+
+        while (true) {
+
+            boolean endOfGame1 = performUserMove(board, nickName, user1);
+            if (endOfGame1) {
+                incrementFifthCounter(map);
+                printBoard(board);
+                break;
+            }
+            if (drawCheck(board)){
+                break;
+            }
+            boolean endOfGame2 = performComputerMediumModeMove(board, botName, user2);
+            if (endOfGame2) {
+                incrementSixthCounter(map);
+                printBoard(board);
+                break;
+            }
+            if (drawCheck(board)){
+                break;
+            }
+        }
     }
 
     private static int selectingAGameMode() {

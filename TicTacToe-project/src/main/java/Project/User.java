@@ -53,7 +53,6 @@ public class User {
                 return true;
 
             } else {
-
                 System.out.println("\nfield occupied, try again - " + symbol);
                 printBoard(board);
                 userMove(board, symbol);
